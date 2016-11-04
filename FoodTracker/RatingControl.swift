@@ -32,9 +32,15 @@ class RatingControl: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+        let filledStarImage = UIImage(named: "filledStar")
+        let emptyStarImage = UIImage(named: "emptyStar")
+        
         for _ in 0..<starCount {
             let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-            button.backgroundColor = UIColor.red
+            button.setImage(emptyStarImage, for: .normal)
+            button.setImage(filledStarImage, for: .selected)
+            button.setImage(filledStarImage, for: [.highlighted, .selected])
+            button.adjustsImageWhenHighlighted = false
             button.addTarget(self, action: #selector(RatingControl.ratingButtonTapped(button:)), for: .touchDown)
             ratingButtons += [button]
             addSubview(button)
