@@ -60,6 +60,8 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     func textFieldDidBeginEditing(_ textField: UITextField) {
         // Disable the save button while editing.
         saveButton.isEnabled = false
+        checkValidMealName()
+        navigationItem.title = textField.text
     }
     
     func checkValidMealName(){
