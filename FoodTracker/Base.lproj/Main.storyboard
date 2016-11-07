@@ -18,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="90" id="Ax2-tq-dfD" customClass="MealTableViewCell" customModule="FoodTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ax2-tq-dfD" id="KaZ-Av-Whl">
                                     <frame key="frameInset" width="375" height="89"/>
@@ -113,7 +113,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="e1k-Jr-oAL">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zm7-VB-qwt"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zm7-VB-qwt">
+                            <connections>
+                                <segue destination="skZ-Pm-rgf" kind="show" id="WSO-fK-UUw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="cbO-ig-NSw">
                             <connections>
                                 <segue destination="tfi-aS-APB" kind="unwind" unwindAction="unwindToMealListWithSender:" id="pcC-zc-oY4"/>
@@ -178,6 +182,7 @@
         <image name="defaultPhoto" width="239" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="WSO-fK-UUw"/>
         <segue reference="c6z-cZ-DSN"/>
     </inferredMetricsTieBreakers>
 </document>
