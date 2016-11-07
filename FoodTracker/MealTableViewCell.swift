@@ -15,6 +15,11 @@ class MealTableViewCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
     
+    /*
+     This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
+     or constructed as part of adding a new meal.
+     */
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
