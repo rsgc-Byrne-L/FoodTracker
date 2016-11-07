@@ -1,14 +1,14 @@
 //
-//  Meal.swift
-//  ColorMix
+//  RatingControl.swift
+//  FoodTracker
 //
-//  Created by Scott Blackwell on 2016-11-06.
-//  Copyright © 2016 Scott Blackwell. All rights reserved.
+//  Created by Liam Byrne on 2016-11-02.
+//  Copyright © 2016 Liam Byrne. All rights reserved.
 //
 
 import UIKit
 
-public class Meal: NSObject, NSCoding {
+class Meal: NSObject, NSCoding {
     // MARK: Properties
     
     var name: String
